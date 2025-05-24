@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Lemon Pasta Recipe</title>
+    <style>
+        /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif; /* A nice serif font for a recipe */
+            line-height: 1.7; /* Good readability */
+            color: #444; /* Dark gray text */
+            background-color: #f9f9f9; /* A very light, warm gray */
+            padding: 20px; /* Some padding around the whole page */
+        }
+
+        .recipe-container {
+            max-width: 700px; /* Max width for the recipe card */
+            margin: 30px auto; /* Top/bottom margin, and auto left/right to center */
+            background-color: #fff; /* White background for the card itself */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+
+        /* Recipe Header Styling */
+        .recipe-container h1 { /* Targeting h1 specifically inside our container */
+            text-align: center;
+            color: #c75000; /* A warm, orangey-red for the title */
+            margin-bottom: 25px;
+            font-size: 2.5em; /* Relative font size, 2.5 times the body font size */
+        }
+
+        /* Recipe Info Styling */
+        .recipe-info img {
+            width: 100%; /* Make image responsive, take full width of its container */
+            max-width: 500px; /* But don't let it get too huge on wide screens */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* To allow margin auto for centering */
+            margin: 0 auto 20px auto; /* Center the image and add space below */
+            border-radius: 6px; /* Slightly rounded corners for the image */
+        }
+
+        .recipe-info .description {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .recipe-info .details {
+            background-color: #f0f8ff; /* A very light alice blue background */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            border-left: 4px solid #add8e6; /* A light blue left border accent */
+        }
+        .recipe-info .details p {
+            margin-bottom: 5px; /* Small space between each detail line */
+            font-size: 0.95em;
+        }
+        .recipe-info .details p:last-child {
+            margin-bottom: 0; /* No margin for the last item in details */
+        }
+
+        /* Ingredients & Instructions Styling */
+        .recipe-ingredients h2,
+        .recipe-instructions h2 { /* Targeting h2 in both sections */
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee; /* A light underline for section titles */
+            padding-bottom: 5px;
+        }
+
+        .recipe-ingredients ul {
+            list-style-type: disc; /* Default, but explicit */
+            margin-left: 25px; /* Indent the list a bit */
+            padding-left: 0; /* Remove default padding if browser adds any beyond margin */
+            margin-bottom: 25px;
+        }
+
+        .recipe-ingredients li {
+            margin-bottom: 8px; /* Space between each ingredient */
+            color: #555; /* Slightly lighter than main text */
+        }
+
+        .recipe-instructions ol {
+            list-style-type: decimal; /* Default, but explicit for numbered list */
+            margin-left: 25px; /* Indent the steps */
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+
+        .recipe-instructions li {
+            margin-bottom: 12px; /* A bit more space between steps */
+            color: #444; /* Same as body default text color */
+            line-height: 1.8; /* A bit more line height within each step for readability */
+        }
+
+        /* Recipe Footer Styling */
+        .recipe-footer {
+            text-align: center;
+            margin-top: 30px; /* Space above the footer */
+            padding-top: 20px; /* Space between content and footer line */
+            border-top: 1px dashed #ddd; /* A dashed line above the footer */
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="recipe-container">
+        <header class="recipe-header">
+            <h1>Simple Lemon Pasta</h1>
+        </header>
+
+        <section class="recipe-info">
+            <img src="https://placehold.co/600x400/F0E68C/333333?text=Lemon+Pasta" alt="A delicious bowl of lemon pasta">
+            <p class="description">A bright, zesty, and incredibly simple pasta dish that comes together in minutes. Perfect for a quick weeknight meal!</p>
+            <div class="details">
+                <p><strong>Prep time:</strong> 5 minutes</p>
+                <p><strong>Cook time:</strong> 10 minutes</p>
+                <p><strong>Servings:</strong> 2</p>
+            </div>
+        </section>
+
+        <section class="recipe-ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>200g spaghetti or linguine</li>
+                <li>2 tbsp olive oil</li>
+                <li>2 cloves garlic, minced</li>
+                <li>Zest of 1 lemon</li>
+                <li>Juice of 1/2 lemon</li>
+                <li>2 tbsp butter</li>
+                <li>1/4 cup grated Parmesan cheese, plus more for serving</li>
+                <li>Salt and freshly ground black pepper to taste</li>
+                <li>Fresh parsley, chopped (for garnish)</li>
+            </ul>
+        </section>
+
+        <section class="recipe-instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Cook pasta according to package directions until al dente. Reserve about 1/2 cup of pasta water before draining.</li>
+                <li>While pasta is cooking, heat olive oil in a large skillet over medium heat. Add minced garlic and cook until fragrant, about 1 minute (do not brown).</li>
+                <li>Add lemon zest and cook for another 30 seconds.</li>
+                <li>Remove skillet from heat. Add the drained pasta to the skillet along with the butter, lemon juice, and a splash of the reserved pasta water.</li>
+                <li>Toss well to combine, adding more pasta water if needed to create a light sauce that coats the pasta.</li>
+                <li>Stir in the Parmesan cheese. Season with salt and pepper to taste.</li>
+                <li>Serve immediately, garnished with fresh parsley and extra Parmesan if desired.</li>
+            </ol>
+        </section>
+
+        <footer class="recipe-footer">
+            <p>Enjoy your delicious Simple Lemon Pasta!</p>
+        </footer>
+    </div> <!-- Closing recipe-container -->
+</body>
+</html>
